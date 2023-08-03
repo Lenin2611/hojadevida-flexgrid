@@ -1,0 +1,97 @@
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+    "left center right";
+}
+
+.left {
+    grid-area: left;
+    background-color: #a0bfe0;
+}
+
+.center {
+    grid-area: center;
+    background-color: #c5dff8;
+}
+
+.right {
+    grid-area: right;
+    background-color: #a0bfe0;
+}
+
+.left,.center,.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.left-c,.center-c,.right-c {
+    margin-block: auto;
+}
+
+img {
+    border-radius: 100vw;
+    margin: 1vw 2vw;
+    width: 15vw;
+    height: 15vw;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(69, 115, 255);
+}
+
+a:hover {
+    color: rgb(0, 64, 255);
+}
+
+.info,.perfil,.proyectos,.skills,.logros,.idiomas,.estudios,.experiencia {
+    margin: 1vw 2vw;
+    font-size: 1.7vw;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 100vw;
+        grid-template-areas: 
+        "left"
+        "center"
+        "right";
+    }
+
+    .left,.center,.right {
+        overflow-x: hidden;
+    }
+
+    img {
+        border-radius: 100vw;
+        margin: 4vw 2vw;
+        width: 30vw;
+        height: 30vw;
+    }
+    
+    .info,.perfil,.proyectos,.skills,.logros,.idiomas,.estudios,.experiencia {
+        margin: 4vw 2vw;
+        font-size: 4vw;
+    }
+}
